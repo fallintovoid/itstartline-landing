@@ -1,0 +1,21 @@
+.header {
+    padding: 20px 30px 20px 30px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+}
+
+.logo {
+    width: 170px;
+    height: 100%;
+}
+
+.navigation {
+    display: flex; 
+    align-items: center;
+    gap: 70px;
+}
+

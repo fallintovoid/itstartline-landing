@@ -1,0 +1,13 @@
+@import '../../styles/variables.scss';
+
+.link {
+    font-size: 15px;
+    color: $theme-white;
+    text-decoration: none;
+    border: 0;
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+        color: $theme-yellow;
+    }
+}

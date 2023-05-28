@@ -1,0 +1,11 @@
+.nav_item {
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+    border: 0;
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+        color: #ffdc60;
+    }
+}

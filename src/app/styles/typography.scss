@@ -1,0 +1,52 @@
+@import './mixins.scss';
+
+.h1 {
+    line-height: 1.1;
+    font-weight: 700;
+    letter-spacing: -2px;
+    font-size: 50px;
+  
+    @include for-tablet-landscape-up {
+      font-size: 60px;
+    }
+  
+    @include for-desktop-up {
+      font-size: 70px;
+    }
+}
+  
+.h2 {
+    font-size: 36px;
+
+    @include for-tablet-portrait-up {
+        font-size: 42px;
+    }
+}
+
+.h3 {
+    font-size: 24px;
+
+    @include for-tablet-portrait-up {
+        font-size: 36px;
+    }
+}
+
+.h4 {
+    font-size: 18px;
+
+    @include for-tablet-portrait-up {
+        font-size: 24px;
+    }
+}
+
+.h5 {
+    font-size: 13px;
+
+    @include for-tablet-portrait-up {
+        font-size: 15px;
+    }
+
+    @include for-tablet-landscape-up {
+        font-size: 17px;
+    }
+}

@@ -1,0 +1,66 @@
+@import '../../styles/variables.scss';
+@import '../../styles/animations.scss';
+
+.yellow_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: $theme-black;
+    line-height: 60px;
+    text-transform: capitalize;
+    gap: 10px;
+    background: $theme-yellow;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    padding: 0 50px;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out 0s;
+    outline: none;
+    border: none;
+    width: fit-content;
+    cursor: pointer;
+
+    &:hover {
+        color: $theme-black;
+        background-color: $theme-white;
+        & i {
+          animation: tfLeftToRight 0.5s forwards;
+        }
+      }
+      &::before,
+      &::after {
+        content: "";
+        background: $theme-cyan;
+        height: 50%;
+        width: 0;
+        position: absolute;
+        transition: 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+        -webkit-transition: 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+        z-index: -1;
+      }
+      &::before {
+        top: 0;
+        left: 0;
+        right: auto;
+      }
+      &::after {
+        bottom: 0;
+        right: 0;
+        left: auto;
+      }
+      &:hover {
+        &::before {
+          width: 100%;
+          right: 0;
+          left: auto;
+        }
+        &::after {
+          width: 100%;
+          left: 0;
+          right: auto;
+        }
+      }
+}

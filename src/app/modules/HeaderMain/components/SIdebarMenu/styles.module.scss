@@ -1,0 +1,64 @@
+@import '../../../../styles/mixins.scss';
+
+.sidebar {
+    height: 100vh;
+    position: fixed;
+    right: -100%;
+    width: 80vw;
+    background-color: black;
+    z-index: 9999;
+    transition: 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 30px;
+    gap: 50px;
+    color: white;
+
+    @include for-tablet-portrait-up {
+        width: 60vw;
+        padding: 60px 40px 40px 60px;
+    }
+    @include for-tablet-landscape-up {
+        width: 40vw;
+    }
+
+    &.is_open {
+        right: 0;
+    }
+}
+
+.navigation {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.h3 {
+    color: rgb(136, 136, 136);
+    text-transform: uppercase;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact_list {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    gap: 15px;
+}
+
+.logo_wrapper {
+    width: 130px;
+    height: 50px;
+
+    @include for-tablet-portrait-up {
+        height: 70px;
+        width: 190px;
+    }
+}

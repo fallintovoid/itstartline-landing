@@ -1,0 +1,47 @@
+@import './breakpoints.scss';
+
+@mixin for-phone-up {
+    @media (min-width: $phone) {
+      @content;
+    }
+}
+  
+@mixin for-tablet-portrait-up {
+    @media (min-width: $tablet-portrait) {
+        @content;
+    }
+}
+
+@mixin for-tablet-landscape-up {
+    @media (min-width: $tablet-landscape) {
+        @content;
+    }
+}
+
+@mixin for-desktop-up {
+    @media (min-width: $desktop) {
+        @content;
+    }
+}
+
+@mixin for-big-desktop-up {
+    @media (min-width: $big-desktop) {
+        @content;
+    }
+}
+
+@mixin section-x-padding {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @include for-tablet-portrait-up {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    @include for-tablet-landscape-up {
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+}
+  

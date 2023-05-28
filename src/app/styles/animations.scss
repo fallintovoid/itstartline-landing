@@ -1,0 +1,12 @@
+@keyframes tfLeftToRight {
+    49% {
+      transform: translateX(30%);
+    }
+    50% {
+      opacity: 0;
+      transform: translateX(-30%);
+    }
+    51% {
+      opacity: 1;
+    }
+}

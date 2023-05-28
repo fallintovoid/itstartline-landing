@@ -1,0 +1,11 @@
+@import '../../../../styles/mixins.scss';
+
+.nav_list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    @include for-tablet-portrait-up {
+        display: none;
+    }
+}

@@ -1,0 +1,16 @@
+@import '../../styles/mixins.scss';
+
+.close_button {
+    font-size: 30px;
+    transition: 0.3s ease-in;
+    cursor: pointer;
+
+    @include for-tablet-landscape-up {
+        font-size: 50px;
+    }
+
+    &:hover {
+        color: red;
+        transform: rotate(10deg);
+    }
+}
