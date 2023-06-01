@@ -1,5 +1,5 @@
-@import '../../../../styles/variables.scss';
-@import '../../../../styles/mixins.scss';
+@import '../../../../../styles/variables.scss';
+@import '../../../../../styles/mixins.scss';
 
 
 .hero {
@@ -8,6 +8,7 @@
     padding-top: 220px;
     padding-bottom: 65px;
     color: $theme-white;
+    overflow: hidden;
 }
 
 .information {
@@ -16,6 +17,8 @@
     align-items: center;
     justify-content: space-between;
     gap: 40px;
+    position: relative;
+    z-index: 5;
     @include section-x-padding;
 
     @include for-tablet-landscape-up {
@@ -63,6 +66,8 @@
     width: 80%;
     height: 100%;
     object-fit: cover;
+    position: relative;
+    z-index: 2;
 }
 
 .yellow {
@@ -75,4 +80,36 @@
     gap: 15px;
     list-style: disc;
     margin-left: 15px;
+}
+
+.blob_top_left {
+    position: absolute;
+    z-index: 1;
+    top: -200px;
+    left: -140px;
+}
+
+.blob_right {
+    position: absolute;
+    top: -200px;
+    right: -300px;
+    z-index: 1;
+    display: none;
+
+    @include for-tablet-portrait-up {
+        display: block;
+    }
+}
+
+.blob_under_image {
+    position: absolute;
+    z-index: 0;
+}
+
+.image_wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

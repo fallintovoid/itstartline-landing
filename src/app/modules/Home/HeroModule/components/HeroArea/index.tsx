@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Button } from "@/app/UI";
 import { BsTelegram, BsDiscord, BsInstagram, BsYoutube } from "react-icons/bs";
 import Link from "next/link";
+import { Blob } from "@/app/UI";
 
 const HeroArea = () => {
   return (
@@ -50,13 +51,24 @@ const HeroArea = () => {
             </Link>
           </ul>
         </div>
-        <Image
-          src="/images/hero/cat.png"
-          alt="Cat"
-          width={200}
-          height={200}
-          className={s.image}
-        />
+        <div className={s.image_wrapper}>
+          <Image
+            src="/images/hero/cat.png"
+            alt="Cat"
+            width={200}
+            height={200}
+            className={s.image}
+          />
+          <div className={s.blob_under_image}>
+            <Blob size={500} color="#57c9da" opacity={0.3} duration={20000} />
+          </div>
+        </div>
+      </div>
+      <div className={s.blob_top_left}>
+        <Blob size={433} color="#FFD84E" opacity={1} duration={20000} />
+      </div>
+      <div className={s.blob_right}>
+        <Blob size={990} color="#5956E9" opacity={0.5} duration={40000} />
       </div>
     </section>
   );

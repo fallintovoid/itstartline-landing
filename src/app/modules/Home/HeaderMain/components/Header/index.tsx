@@ -3,8 +3,8 @@
 import React, { useState } from "react";
 import { Logo } from "../Logo";
 import s from "./styles.module.scss";
-import SidebarButton from "../SidebarButton";
-import SidebarMenu from "../SIdebarMenu";
+import DrawerButton from "../DrawerButton";
+import Drawer from "../DrawerMenu";
 import NavList from "../NavList";
 
 const Header = () => {
@@ -18,10 +18,10 @@ const Header = () => {
           </div>
           <NavList />
         </div>
-        <SidebarButton openSidebar={() => setIsSidebarOpen(true)} />
+        <DrawerButton openSidebar={() => setIsSidebarOpen(true)} />
       </header>
 
-      <SidebarMenu
+      <Drawer
         isOpen={isSidebarOpen}
         closeSidebar={() => setIsSidebarOpen(false)}
       />

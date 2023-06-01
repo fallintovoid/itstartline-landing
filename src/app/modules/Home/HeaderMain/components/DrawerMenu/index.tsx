@@ -5,7 +5,7 @@ import { Logo } from "../Logo";
 import ContactItem from "../ContactItem";
 import { linkItems } from "../../constants/navItems";
 import CloseButton from "@/app/UI/CloseButtonHexagon";
-import SidebarNavList from "../SidebarNavList";
+import DrawerNavList from "../DrawerNavList";
 
 type Props = {
   isOpen: boolean;
@@ -26,7 +26,7 @@ const SidebarMenu = ({ isOpen, closeSidebar }: Props) => {
         <CloseButton onClick={closeSidebar} />
       </div>
       <h3 className="h3">Делаем процесс обучения интересным и эффективным</h3>
-      <SidebarNavList />
+      <DrawerNavList />
       <div className={s.contacts}>
         <h3 className={s.h3}>свяжитесь с нами</h3>
         <ul className={s.contact_list}>

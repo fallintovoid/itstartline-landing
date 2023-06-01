@@ -1,0 +1,15 @@
+.subtitle {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.text {
+    font-size: 18px;
+}
