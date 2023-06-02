@@ -10,12 +10,51 @@
     flex-direction: column;
     align-items: center;
     color: white;
-    gap: 20px;
+    gap: 40px;
 }
 
 .cards_wrapper {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 15px;
+
+    @include for-tablet-portrait-up {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @include for-tablet-landscape-up {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.subtitle {
+    text-align: center;
+    font-weight: bold;
+}
+
+.text_yellow {
+    text-decoration: underline;
+    color: $theme-yellow;
+}
+
+.text {
+    color: hsla(0,0%,100%,.5);
+    text-align: center;
+    line-height: 1.5em;
+}
+
+.text_wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+
+    @include for-tablet-portrait-up {
+        width: 90%;
+    }
+
+    @include for-tablet-landscape-up {
+        width: 70%;
+    }
 }

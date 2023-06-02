@@ -52,13 +52,5 @@
 }
 
 .p {
-    font-size: 13px;
-
-    @include for-tablet-portrait-up {
-        font-size: 15px;
-    }
-
-    @include for-tablet-landscape-up {
-        font-size: 17px;
-    }
+    font-size: 18px;
 }
