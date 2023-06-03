@@ -11,6 +11,12 @@
     align-items: center;
     color: white;
     gap: 40px;
+    position: relative;
+    z-index: 10;
+}
+
+.title {
+    text-align: center;
 }
 
 .cards_wrapper {

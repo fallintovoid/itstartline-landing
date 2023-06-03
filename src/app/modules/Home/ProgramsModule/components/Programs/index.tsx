@@ -10,7 +10,7 @@ const Programs = (props: Props) => {
   return (
     <section className={s.programs}>
       <Subtitle text="Мы проводим" colorText="#ABA8A8" colorDot="#ffdc60" />
-      <h1 className="h1">Обучающие мероприятия</h1>
+      <h1 className={cn("h1", s.title)}>Обучающие мероприятия</h1>
       <div className={s.cards_wrapper}>
         <Card
           title="Курсы"

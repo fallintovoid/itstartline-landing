@@ -26,7 +26,7 @@ const Card = ({
           className={s.image_wrapper}
         />
 
-        <h4 className="h4">{title}</h4>
+        <h4 className={cn("h4", s.h4)}>{title}</h4>
       </div>
       <p className={cn("p", s.text)}>{children}</p>
     </div>

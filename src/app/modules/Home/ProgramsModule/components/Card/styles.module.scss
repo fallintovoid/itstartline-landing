@@ -10,6 +10,21 @@
     align-items: center;
     justify-content: flex-start;
     gap: 20px;
+    cursor: pointer;
+
+    &:hover {
+        .image_wrapper {
+            transform: translateY(-10px);
+        }
+
+        .h4 {
+            color: $theme-blue;
+        }
+    }
+}
+
+.h4 {
+    transition: 0.2s ease-in-out;
 }
 
 .heading {
@@ -23,6 +38,7 @@
 .image_wrapper {
     width: 150px;
     height: 150px;
+    transition: 0.2s ease-in;
 }
 
 .text {
