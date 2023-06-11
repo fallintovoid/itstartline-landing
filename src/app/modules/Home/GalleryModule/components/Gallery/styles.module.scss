@@ -1,0 +1,23 @@
+@import '../../../../../styles/variables.scss';
+@import '../../../../../styles/mixins.scss';
+
+
+.gallery {
+    @include section-y-padding;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.photo_grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    @include for-tablet-landscape-up {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
