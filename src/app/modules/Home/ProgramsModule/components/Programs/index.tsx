@@ -1,7 +1,7 @@
 import React from "react";
 import cn from "classnames";
 import s from "./styles.module.scss";
-import { Subtitle } from "@/app/UI";
+import { Subtitle } from "@/UI";
 import Card from "../Card";
 
 type Props = {};

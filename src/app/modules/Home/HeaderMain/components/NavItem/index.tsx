@@ -1,6 +1,6 @@
 import React from "react";
 import s from "./styles.module.scss";
-import { CustomLink } from "@/app/UI";
+import { CustomLink } from "@/UI";
 
 type Props = {
   text: string;

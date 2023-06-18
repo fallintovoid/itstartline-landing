@@ -1,0 +1,46 @@
+@import '@/styles/variables.scss';
+@import '@/styles/mixins.scss';
+
+.questions_area {
+    @include section-y-padding;
+    @include section-x-padding;
+
+    background-color: $theme-yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.inner_wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+
+    @include for-tablet-landscape-up {
+        width: 65%;
+    }
+}
+
+.title {
+    text-align: center;
+}
+
+.text {
+    text-align: center;
+}
+
+.link {
+    color: $theme-light-blue;
+    text-decoration: underline;
+}
+
+.questions_list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    width: 100%;
+}

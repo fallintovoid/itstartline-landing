@@ -1,7 +1,7 @@
 import React from "react";
 import { AiFillStar } from "react-icons/ai";
 import s from "./styles.module.scss";
-import { CustomLink } from "@/app/UI";
+import { CustomLink } from "@/UI";
 
 type Props = {
   text: string;

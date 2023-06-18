@@ -1,0 +1,40 @@
+@import '@/styles/variables.scss';
+
+.wrapper {
+    width: 100%;
+    background-color: $theme-white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+
+.question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+    padding: 40px 45px;
+}
+
+.icon {
+    transition: 0.3s ease;
+}
+
+.answer {
+    overflow: hidden;
+    height: 0;
+    transition: height 0.3s ease;
+    transition: padding-bottom 0.3s ease;
+    padding-bottom: 0;
+    padding-left: 45px;
+    padding-right: 45px;
+    
+    &.active {
+        height: 100%;
+        padding: 0 45px 40px 45px;
+        padding-bottom: 40px;
+
+    }
+}

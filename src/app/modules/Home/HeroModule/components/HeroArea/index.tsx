@@ -3,10 +3,10 @@
 import React from "react";
 import s from "./styles.module.scss";
 import Image from "next/image";
-import { Button } from "@/app/UI";
+import { Button } from "@/UI";
 import { BsTelegram, BsDiscord, BsInstagram, BsYoutube } from "react-icons/bs";
 import Link from "next/link";
-import { Blob } from "@/app/UI";
+import { Blob } from "@/UI";
 
 const HeroArea = () => {
   return (

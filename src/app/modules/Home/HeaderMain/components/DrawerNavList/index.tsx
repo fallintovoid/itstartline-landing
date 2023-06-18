@@ -1,6 +1,6 @@
 import React from "react";
 import { navItems } from "../../constants/navItems";
-import { CustomLink } from "@/app/UI";
+import { CustomLink } from "@/UI";
 
 import s from "./styles.module.scss";
 

@@ -4,7 +4,7 @@ import s from "./styles.module.scss";
 import { Logo } from "../Logo";
 import ContactItem from "../ContactItem";
 import { linkItems } from "../../constants/navItems";
-import CloseButton from "@/app/UI/CloseButtonHexagon";
+import { CloseButton } from "@/UI";
 import DrawerNavList from "../DrawerNavList";
 
 type Props = {

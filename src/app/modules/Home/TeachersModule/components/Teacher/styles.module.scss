@@ -1,0 +1,66 @@
+@import '@/styles/variables.scss';
+@import '@/styles/mixins.scss';
+
+.teacher {
+    border-radius: 15px;
+    position: relative;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    overflow-x: hidden;
+
+    &:hover {
+        .information {
+            bottom: 0;
+        }
+
+        .name {
+            transform: translateY(0);
+        }
+    }
+
+    @include for-tablet-portrait-up {
+        aspect-ratio: 1/1;
+        overflow: hidden;
+        cursor: pointer;
+    }
+}
+
+.photo {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-position: top;
+}
+
+.information {
+    transition: 0.3s ease-in-out;
+    width: 100%;
+    z-index: 3;
+    background-color: $theme-yellow;
+    color: $theme-black;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @include for-tablet-portrait-up {
+        position: absolute;
+        bottom: -100%;
+    }
+}
+
+.name {
+    font-weight: 500;
+    font-size: 16px;
+    transition: 0.5s ease-out;
+
+    @include for-tablet-portrait-up {
+        transform: translateY(10px);
+    } 
+}
+
+.description {
+    font-size: 13px;
+}

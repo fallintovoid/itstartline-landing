@@ -4,7 +4,7 @@
     line-height: 1.1;
     font-weight: 700;
     letter-spacing: -2px;
-    font-size: 50px;
+    font-size: 45px;
   
     @include for-tablet-landscape-up {
       font-size: 60px;
@@ -53,4 +53,5 @@
 
 .p {
     font-size: 18px;
+    line-height: 1.5em;
 }
