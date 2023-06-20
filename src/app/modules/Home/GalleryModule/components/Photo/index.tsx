@@ -19,6 +19,7 @@ const Photo = ({ src, title }: Props) => {
         width={200}
         height={200}
         className={s.photo}
+        priority
       />
     </li>
   );

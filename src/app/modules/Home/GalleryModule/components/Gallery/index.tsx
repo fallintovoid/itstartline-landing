@@ -4,9 +4,15 @@ import React from "react";
 import s from "./styles.module.scss";
 import { Button, Subtitle } from "@/UI";
 import { useGallery } from "../../hooks/useGallery";
+import { Photo } from "../../types/photo";
 
-const Gallery = () => {
-  const { renderPhotos, loadPhotos, canShowLoadMoreButton } = useGallery();
+type Props = {
+  pictures: Photo[];
+};
+
+const Gallery = ({ pictures }: Props) => {
+  const { renderPhotos, loadPhotos, canShowLoadMoreButton } =
+    useGallery(pictures);
   return (
     <section className={s.gallery}>
       <Subtitle

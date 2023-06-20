@@ -1,23 +1,28 @@
-import React, { use } from "react";
+"use client";
+
+import React from "react";
 import s from "./styles.module.scss";
-import { Subtitle } from "@/UI";
-import { fetchTeachers } from "../../utlis/fetchTeachers";
+import { Button, Subtitle } from "@/UI";
 import Teacher from "../Teacher";
 import cn from "classnames";
+import { Teacher as TeacherType } from "../../types/teachers";
+import useTeachers from "../../hooks/useTeachers";
 
-type Props = {};
+type Props = {
+  teachers: TeacherType[];
+};
 
-const TeachersArea = (props: Props) => {
-  const teachers = use(fetchTeachers());
+const TeachersArea = ({ teachers }: Props) => {
+  const { loadTeachers, renderTeachers, canShowLoadMoreButton } =
+    useTeachers(teachers);
   return (
     <section className={s.teachers}>
       <Subtitle text="Команда" colorText="white" colorDot="#ffdc60" />
       <h1 className={cn("h1", s.title)}>Наши преподаватели</h1>
-      <ul className={s.teachers_list}>
-        {teachers.map((item) => (
-          <Teacher {...item} key={item.description} />
-        ))}
-      </ul>
+      <ul className={s.teachers_list}>{renderTeachers()}</ul>
+      {canShowLoadMoreButton && (
+        <Button clickHandler={loadTeachers}>Хочу больше!</Button>
+      )}
     </section>
   );
 };
